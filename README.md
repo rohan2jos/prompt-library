@@ -24,6 +24,22 @@ uv run uvicorn main:app --reload
 
 ---
 
+### Backend api testing
+
+Run the FastAPI server (from the `backend/` directory):
+
+```bash
+cd backend && uv run uvicorn app.main:app --reload
+```
+
+Fetch a prompt by slug:
+
+```bash
+curl "http://127.0.0.1:8000/prompts/generate-study-plan"
+```
+
+---
+
 ### Database
 
 Supabase is used as the hosted Postgres database. There is no local DB.
